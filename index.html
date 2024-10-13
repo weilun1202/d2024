@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <title>證照</title>
+  <style>
+    /* 通用樣式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: black;
+      margin-bottom: 3em;
+    }
+
+    .header .container_header {
+      display: flex;
+      /* 垂直居中 */
+      /* align-items: center; */
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .header .logo {
+      width: 100px;
+    }
+
+    .header .logo img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .header .nav {
+      margin: auto;
+    }
+
+    .header .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 1em;
+      position: relative;
+      display: inline-block;
+      /* 效果呈現(原始) */
+      transform: translateY(0px);
+      transition: .3s;
+    }
+
+    /* 觸摸效果 (上浮效果) */
+    .header .nav a:hover {
+      transform: translateY(-5px);
+    }
+
+    /* 觸摸效果 (線左右伸展效果) */
+    .header .nav a:after {
+      content: "";
+      position: absolute;
+      /* left 和 richt 一開始隱藏 */
+      left: 50%;
+      right: 50%;
+      bottom: -5px;
+      height: 0%;
+      border-bottom: 1px solid #fff;
+      transition: .3s;
+    }
+
+    .header .nav a:hover:after {
+      left: 0;
+      right: 0;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    /* 設定 h1 標題（證照）的樣式 */
+    h1 {
+      text-align: center;
+      font-size: 72px;
+      /* 將字體大小設定為60px */
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 40px;
+      color: blue;
+    }
+
+    ul.Certificate {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    ul.Certificate a {
+      margin: 10px;
+    }
+
+    ul.Certificate img {
+      width: 150px;
+      /* 預設圖片大小 */
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+
+    /* 響應式設計：手機屏幕 */
+    @media (max-width: 720px) {
+      ul.Certificate {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      ul.Certificate img {
+        width: 100%;
+        /* 圖片寬度佔滿整行 */
+        max-width: 500px;
+        /* 設定最大寬度以保持圖片比例 */
+        margin-bottom: 1rem;
+        /* 增加每張圖片之間的間距 */
+      }
+    }
+
+    /* 響應式設計：中等屏幕 (介於600px和1200px之間) */
+    @media (min-width: 601px) and (max-width: 1199px) {
+      ul.Certificate img {
+        width: 100%;
+        /* 這裡可根據需要調整圖片大小 */
+      }
+    }
+
+    /* 響應式設計：大屏幕 */
+    @media (min-width: 1200px) {
+      ul.Certificate img {
+        width: 350px;
+        /* 大螢幕時放大圖片 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container_header">
+      <h1 class="logo">
+        <a href="img/logo 01-1.png" class="logo">
+          <img src="img/logo 01-2.png">
+        </a>
+      </h1>
+
+      <nav class="nav">
+        <a href="#">關於</a>
+        <a href="#">學經歷</a>
+        <a href="#">證照與證書</a>
+        <a href="#">旅遊</a>
+        <a href="#">專案</a>
+        <a href="mailto:a0977427590@gmail.com">聯絡我</a>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <h1>
+      <span>證照</span>
+      <!-- 標題 -->
+    </h1>
+    <section>
+
+      <section class="item_skill">
+        <h2>旅遊</h2>
+        <ul class="Certificate">
+          <a href="img/01 華語導遊.jpg"><img src="img/01 華語導遊.jpg" alt=""></a>
+          <a href="img/02 外語領隊 (日文).jpg"><img src="img/02 外語領隊 (日文).jpg" alt=""></a>
+        </ul>
+      </section>
+      <section class="item_skill">
+        <h2>語言</h2>
+        <ul class="Certificate">
+          <a href="img/03 N2證書 正.jpg"><img src="img/03 N2證書 正.jpg" alt=""></a>
+          <a href="img/04 BJT J3.jpg"><img src="img/04 BJT J3.jpg" alt=""></a>
+          <a href="img/05 華語教學學程.jpg"><img src="img/05 華語教學學程.jpg" alt=""></a>
+          <a href="img/06 世大運.jpg"><img src="img/06 世大運.jpg" alt=""></a>
+          <a href="img/07 東方國際學院 語言學校.jpg"><img src="img/07 東方國際學院 語言學校.jpg" alt=""></a>
+        </ul>
+      </section>
+      <section class="item_skill">
+        <h2>醫療</h2>
+        <ul class="Certificate">
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/08 照顧服務員結業證書.jpg" alt=""></a>
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/09 BLS基本救命術訓練課程.jpg" alt=""></a>
+        </ul>
+      </section>
+      <section class="item_skill">
+        <h2>資訊</h2>
+        <ul class="Certificate">
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/10 丙級 電腦軟體應用.jpg" alt=""></a>
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/11 丙級 網頁設計.jpg" alt=""></a>
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/12 華梵大學 新尖兵課程Ⅱ 1120420 嵌入式機器學習 證書.jpg" alt=""></a>
+        </ul>
+      </section>
+      <section class="item_skill">
+        <h2>金融</h2>
+        <ul class="Certificate">
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/保險業務 - 人壽.jpg" alt=""></a>
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/保險業務 - 外幣.jpg" alt=""></a>
+          <a href="img/08 照顧服務員結業證書.jpg"><img src="img/保險業務 - 產險.jpg" alt=""></a>
+        </ul>
+      </section>
+    </section>
+</body>
+
+</html>
